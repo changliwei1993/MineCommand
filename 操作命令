@@ -1,0 +1,30 @@
+sudo cp -r /home/changliwei1993gmail/ 下载/jdk1.8.0_73   /usr/lib/java
+复制一个目录下的所有文件到另一个目录
+
+
+sudo rm -r /usr/bin/java/
+移除文件夹及文件夹下的文件
+
+
+
+#将APK push到 android系统
+arthur@Arthur:~/桌面/test$ adb push ./Dialer.apk  /system/priv-app
+
+#启动Activity
+adb shell am start -n com.android.dialer/       com.android.dialer.DialtactsActivity
+
+
+#Shell命令准备
+tools>adb remount 
+tools>adb shell 
+#su 
+
+#列出android系统下的App
+root@xmm6321_watch_512MB:/system/priv-app # ls
+
+#应该是获取系统权限
+root@xmm6321_watch_512MB:/system/priv-app # mount -o remount -o rw /system
+
+#移除文件
+root@xmm6321_watch_512MB:/system/priv-app # rm Dialer.apk                      
+root@xmm6321_watch_512MB:/system/priv-app # rm Dialer.odex  
